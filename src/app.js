@@ -13,6 +13,9 @@ const partialsPath = path.join(__dirname,'../templates/partials')
 
 const app = express()
 
+//for heroku
+const port = process.env.PORT ||  3000
+
 //setup handlebar engine and views folder
 app.set('view engine','hbs')
 app.set('views',viewsPath)
@@ -74,7 +77,7 @@ app.get('*',(req,res)=>{
 })
 
 
-app.listen(3000,()=>{
+app.listen(port,()=>{
     console.log('Server running on port 3000')
 })
 
