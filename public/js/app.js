@@ -38,7 +38,7 @@ weatherForm.addEventListener('submit',(e)=>{
         console.log(response.location)
         console.log(response.forecast)
         messageOne.textContent=response.location
-        messageTwo.textContent=response.forecast
+        messageTwo.textContent=response.forecast+'Current temperature is '+response.currentTemp+', chances of rainfall are '+response.rainfallProbability;
     })
 })
 
